@@ -16,3 +16,7 @@ class MainActivityVM @Inject constructor( private  val squadClient: SquadClient)
             squadClientState.postValue(squad)
         }
 }
+=======
+}sdrromkkkkkkk
+        fsdddddd
+
