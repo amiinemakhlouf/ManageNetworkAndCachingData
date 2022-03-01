@@ -15,8 +15,7 @@ class MainActivityVM @Inject constructor( private  val squadClient: SquadClient)
             val squad=squadClient.getSquad().squadName
             squadClientState.postValue(squad)
         }
-}
-=======
+
 }sdrromkkkkkkk
-        fsdddddd
+>>>>>>> mybranch
 
