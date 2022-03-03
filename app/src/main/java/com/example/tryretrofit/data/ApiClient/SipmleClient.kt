@@ -1,12 +1,13 @@
 package com.example.tryretrofit.data.ApiClient
 
+import com.example.tryretrofit.data.ApiClient.model.Simple
 import com.example.tryretrofit.data.ApiClient.model.Squad
 import retrofit2.Response
 import retrofit2.http.GET
 
-interface SquadClient {
+interface SipmleClient {
 
-    @GET("test")
-     suspend fun getSquad() :  Squad
+    @GET("?name=meelad1")
+     suspend fun getSipmle() :  Response<Simple>
 
 }

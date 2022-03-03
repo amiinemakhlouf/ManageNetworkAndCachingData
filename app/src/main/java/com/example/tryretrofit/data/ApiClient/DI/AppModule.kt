@@ -1,7 +1,8 @@
 package com.example.tryretrofit.data.ApiClient.DI
 
 import com.example.tryretrofit.data.ApiClient.Constants
-import com.example.tryretrofit.data.ApiClient.SquadClient
+import com.example.tryretrofit.data.ApiClient.SipmleClient
+import com.example.tryretrofit.data.ApiClient.repository.SquadRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -12,7 +13,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Singleton
 
 @Module
-@InstallIn(ActivityComponent::class)
+@InstallIn(SingletonComponent::class)
 object AppModule {
     @Provides
     @Singleton
@@ -26,8 +27,13 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun provideSquadService(retrofit: Retrofit):SquadClient{
-        return  retrofit.create(SquadClient::class.java)
+    fun provideSquadService(retrofit: Retrofit):SipmleClient{
+        return  retrofit.create(SipmleClient::class.java)
+    }
+    @Provides
+    @Singleton
+    fun provideRepo(sipmleClient: SipmleClient):SquadRepository{
+        return SquadRepository(sipmleClient)
     }
 
 

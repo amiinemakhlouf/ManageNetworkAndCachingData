@@ -2,5 +2,5 @@ package com.example.tryretrofit.data.ApiClient
 
 object Constants {
 
-    val baseUrl="http://127.0.0.1/"
+    val baseUrl="https://api.agify.io/"
 }
